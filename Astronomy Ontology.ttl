@@ -1,0 +1,810 @@
+@prefix : <http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/> .
+
+<http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definitionSource
+<http://www.w3.org/2004/02/skos/core#definitionSource> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#annular_eclipse
+:annular_eclipse rdf:type owl:Class ;
+                 rdfs:subClassOf :eclipse ;
+                 rdfs:comment "Fr.: éclipse annulaire" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "(1) A solar eclipse in which the Moon is close the → apogee and is, therefore, too small to cover the whole disk of the Sun, leaving a visible edge or ring of sunlight. An annular eclipse can last for 12m 30s at the most." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#long-period_variable
+:long-period_variable rdf:type owl:Class ;
+                      rdfs:subClassOf :variable_star ;
+                      rdfs:comment "Fr.: variable à longue période" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "(1) A type of → variable star in which variations in brightness occur over long time-scales of months or years. The term generally refers to → Mira variable types." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#luminous_blue_variable
+:luminous_blue_variable rdf:type owl:Class ;
+                        rdfs:subClassOf :variable_star ;
+                        rdfs:comment "Fr.: variable bleue lumineuse" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "(1) A high-luminosity variable star, which represents a transition phase in the life of a massive star when it evolves off the main sequence to become a supernova. Only about a dozen confirmed LBVs are presently known in our Galaxy. → Hubble-Sandage variable." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#luminous_red_nova
+:luminous_red_nova rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                   rdfs:comment "Fr.: nova rouge lumineuse" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> """(1) A stellar explosion thought to be caused by the → merger of stars in a → binary system. They are characterized by a distinct red color, and a → light curve that lingers with resurgent brightness in the → infrared. The luminosity of the explosion is between that of a → supernova and a → nova.
+
+→ luminous; → red; → nova""" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#lunar_eclipse
+:lunar_eclipse rdf:type owl:Class ;
+               rdfs:subClassOf :eclipse ;
+               rdfs:comment "Fr.: éclipse de lune" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) The → darkening of the → Moon which occurs when the Moon enters the → umbra of the → Earth's shadow. This phenomenon can occur only when the → full Moon is near one of the → lunar nodes of its → orbit around the Earth. There will be a → total eclipse if the entire Moon enters the umbra, otherwise the eclipse will be partial when the Moon is somewhat to the north or south of the node and does not cross the shadow entirely. During the eclipse the Moon looks more or less dark, depending especially on the transparency of the Earth's → atmosphere. The → refraction of Sun's light through the atmosphere sometimes gives a red color to the eclipsed Moon. Colored fringes can be seen around the shadow edge during → partial eclipses. Because an eclipse of the Moon is due to the cutting off of the Sun's light, it is visible from the entire hemisphere where the Moon is above the horizon. The maximum duration of a total lunar eclipse, when the Moon passes through the shadow centrally, is 1h 47m (M.S.: SDE)." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#post-nova
+:post-nova rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> ;
+           rdfs:comment "Fr.: post-nova" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "(1) The stage following a nova outburst, when the star has returned to a quiescent state." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#pre-nova_stage
+:pre-nova_stage rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> ;
+                rdfs:comment "Fr.: étape pré-nova" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) The stage of a star before its eruption to become a nova." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#pulsating_star
+:pulsating_star rdf:type owl:Class ;
+                rdfs:subClassOf :variable_star ;
+                rdfs:comment "Fr.: étoile pulsante" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) A type of → variable star that changes its brightness by changing its volume through expansion and contraction. Classical pulsating stars, including → Cepheids, → RR Lyrae, and → Delta Scuti variables, are located in a quite narrow almost vertical region in the → H-R diagram, known as → instability strip. See also → kappa mechanism." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#solar_eclipse
+:solar_eclipse rdf:type owl:Class ;
+               rdfs:subClassOf :eclipse ;
+               rdfs:comment "Fr.: éclipse de soleil" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "An eclipse in which the Earth passes through the shadow cast by the Moon. Solar eclipses only happen when the Moon is new and when the Moon lies close to the node of its orbit." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#stellar_explosion
+:stellar_explosion rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#total_eclipse
+:total_eclipse rdf:type owl:Class ;
+               rdfs:subClassOf :eclipse ;
+               rdfs:comment "Fr.: éclipse totale" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) An → eclipse in which the whole of the disk of the Sun or Moon is obscured. See also → annular eclipse, → partial eclipse, → totality, → totality path." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#variable_star
+:variable_star rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+               rdfs:comment "Fr.: étoile variable" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) A star whose luminosity changes over periods of time; there are many reasons and many types. → cataclysmic variable; → Cepheid; → pulsating star; → nova; → long-period variable; → short-period variable; → Luminous Blue Variable (LBV); etc." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#supernova_candidate?
+<http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27#supernova_candidate?> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/Kerr_black_hole
+:Kerr_black_hole rdf:type owl:Class ;
+                 rdfs:subClassOf :black_hole .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/Schwarzschild_black_hole
+:Schwarzschild_black_hole rdf:type owl:Class ;
+                          rdfs:subClassOf :black_hole .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/amazonian_era
+:amazonian_era rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/artificial_satellite
+:artificial_satellite rdf:type owl:Class ;
+                      rdfs:subClassOf :satellite .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/asteroid
+:asteroid rdf:type owl:Class ;
+          rdfs:subClassOf :small_solar_system_body ;
+          rdfs:comment "Fr.: astéroïde" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "(1) A small rocky object orbiting the Sun. There are millions of asteroids moving in orbits in the main → asteroid belt, between → Mars and → Jupiter and in the → Kuiper belt. The largest and the first discovered, → Ceres, about 1,000 km in size, is now classified as → dwarf planet (2006 IAU General Assembly). The largest asteroid in the solar system (Ceres apart), is → Pallas, with a size of 582 × 556 × 500 km. On the other hand, the smallest asteroid ever studied is the 2 meters space rock 2015 TC25, which was observed when it made a close flyby of Earth in October 2015. See also → near-Earth asteroid; → binary asteroid." ;
+          <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=asteroid&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/astronomical_object
+:astronomical_object rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                     rdfs:comment "Fr.: objet astronomique" ;
+                     rdfs:label "astronomical object" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "(1) A naturally occurring physical entity or association that lies beyond the Earth's atmosphere and can be studied observationally. In other words, a gravitationally bound structure that is associated with a position in space, but may consist of multiple independent astronomical objects. A list of astronomical objects includes → planets, → asteroids, → comets, → stars, → nebulae, galaxies (→ galaxy), → galaxy clusters, → pulsars, and → black holes. Note that → celestial body, → celestial object, and → heavenly body are less technical terms for these entities." ;
+                     <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=astronomical+object" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/atmosphere
+:atmosphere rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000028> ;
+            rdfs:comment "Fr.: atmosphère" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "(1) The gaseous envelope surrounding a star, planet, or moon. Several solar system planets retain considerable atmospheres, due to their strong gravitational force. The gas motions in the planetary atmosphere, as a response to the heating, coupled with the rotation forces, generate the meteorological systems. The planetary satellites → Titan and → Triton also have atmospheres (M.S.: SDE)." ,
+                                                             "(2) A unit of pressure, called standard atmosphere, which is the pressure of air balanced by a column of mercury 76 cm high with a density of the mercury of 13.595 g/cm3 at normal acceleration of gravity. Such a column applies a pressure equal to its weight to each square cm, or 1.01325 x 106 dynes/cm2 = 1.01325 x 105 N/m2. Since this pressure is equal to 1.03323 kilograms of force per square centimeter, instead of it use is often made of the technical atmosphere (at), exactly equal to 1 kgf/cm2." ;
+            <http://www.w3.org/2004/02/skos/core#definitionSource> """(1) & (2) 
+https://dictionary.obspm.fr/index.php?formSearchTextfield=atmosphere&formSubmit=Search&showAll=1""" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/binary_system
+:binary_system rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/black_hole
+:black_hole rdf:type owl:Class ;
+            rdfs:subClassOf :compact_object ;
+            rdfs:comment "Fr.: trou noir" ;
+            rdfs:label "black hole" ;
+            <http://www.w3.org/2004/02/skos/core#definition> """(1) A fantastically → compact object, predicted by the theory of → general relativity, whose → gravity is so powerful that not even light can escape from it. A black hole forms when matter → collapses to → infinite  → density, producing a → singularity of infinite → curvature in the fabric of → space-time. Each black hole is surrounded by an → event horizon, at which the → escape velocity is the → speed of light. The → Schwarzschild radius for the Sun is about 3 km and for the Earth about 1 cm. There is observational evidence for black holes on a remarkable range of scales in the Universe: → stellar black hole, → intermediate-mass black hole, → primordial black hole, → mini black hole, → supermassive black hole, → Schwarzschild black hole, → Kerr black hole.
+
+Historically, the Newtonian concept of such a celestial body appeared at the end of the 18th century when light was shown to have particle characteristics. In fact the English geologist John Mitchell (1724-1793) and French mathematician and astronomer Pierre Simon Laplace (1749-1827), independently, suggested that regions of space, where gravitational attraction was so strong that not even light could escape, may exist in the Universe. However, the term black hole was coined in 1967 by the Princeton physicist John A. Wheeler (1911-2008); → black; → hole.""" ;
+            <http://www.w3.org/2004/02/skos/core#definitionSource> """(1) 
+https://dictionary.obspm.fr/index.php?formSearchTextfield=black&formSubmit=Search&showAll=1""" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/brown_dwarf
+:brown_dwarf rdf:type owl:Class ;
+             rdfs:subClassOf :substellar_object ;
+             rdfs:comment "Fr.: naine brune" ;
+             rdfs:label "brown dwarf" ;
+             <http://www.w3.org/2004/02/skos/core#definition> """(1) A star-like object whose mass is too small to sustain → hydrogen fusion in its interior and become a star. Brown dwarfs are → substellar objects and occupy an intermediate regime between those of stars and giant planets. With a mass less than 0.08 times that of the Sun (about 80 → Jupiter masses), nuclear reactions in the core of brown dwarfs are limited to the transformation of → deuterium into 3He. The reason is that the cores of these objects are supported against → gravitational collapse by electron → degeneracy pressure (at early spectral types) and → Coulomb pressure (at later spectral types). Brown dwarfs, as ever cooling objects, will have late M dwarf spectral types within a few Myrs of their formation and gradually evolve as L, T and Y dwarfs → brown dwarf cooling. As late-M and early-L dwarfs, they overlap in temperature with the cool end of the stellar → main sequence (→ M dwarf, → L dwarf, → T dwarf, → Y dwarf). In contrast to the OBAFGKM sequence, the M-L-T-Y sequence is an evolutionary one. These objects were first postulated by Kumar (1963, ApJ 137, 1121 & 1126) and Hayashi & Nakano (1963, Prog. Theor.Phys. 30, 460).
+
+The term brown dwarf was first used by Jill Tarter in her 1975 PhD thesis; → brown; → dwarf.""" ;
+             <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=brown+dwarf" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/coma
+:coma rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
+      rdfs:comment "Fr.: coma" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "(1) The glowing envelope of gas and dust that surrounds a comet's nucleus." ,
+                                                       """(2) 2) An elongated, → comet-shaped → image of a → point source of → light caused by → aberration in the → optical system. In → telescopes it is often because → off-axis rays of light striking different parts of the → objective do not focus in the same → image plane.
+→ Coma Berenices; → Coma cluster; → hydrogen coma.""" ;
+      <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) & (2) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=coma" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/comet
+:comet rdf:type owl:Class ;
+       rdfs:subClassOf :small_solar_system_body ;
+       rdfs:comment "Fr.: comète" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "(1) A small body of → gas and → dust which revolves around the → Sun in a usually very → elliptical or even → parabolic → orbit. It is seen to be composed of a → head, or → coma, and often with a spectacular gaseous → tail extending a great distance from the head. The rocky-icy head is called the → comet nucleus. As the comet nears the Sun, the increased temperature causes the → ice in the nucleus to → sublimate and form a gaseous halo around the nucleus, called the coma. Comets often possess two tails, a → dust tail that lies in the orbit behind the comet generated by surface activity, and a brighter, ionized → gas tail, that points away from the Sun, driven by → solar wind. → Long-period comets are thought to originate in the → Oort cloud, at distances exceeding 50,000 → astronomical units (AU). They are perturbed by the planets (especially → Jupiter) to fall in toward the Sun. Their orbits typically have random inclinations and a very large → eccentricity; some → hyperbolic orbits have been observed. → Short-period comets apparently arise in the → Kuiper belt in the zone from 20 to 50 AU. Their orbits typically have small eccentricities. Both cometary reservoirs are thought to represent primordial solar system material. A comet with a dust coating on its surface that inhibits gas production might be classified as an → asteroid. Because of this ambiguity, objects such as → Chiron, a → Centaur asteroid, have been reclassified as comets. Comets are primarily composed of amorphous → water ice, but also contain → carbon dioxide (CO2), → carbon monoxide (CO), → formaldehyde (H2CO), → methanol (CH3OH), → methane (CH4) at a few percent level (with respect to water), and many other molecules at a lower level. See also → comet designation." ;
+       <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=comet&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/comet_nucleus
+:comet_nucleus rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
+               rdfs:comment "Fr.: noyau de comète" ;
+               rdfs:label "comet nucleus" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) The solid, centrally located part of a → comet. The nucleus is a mass of dust and frozen gases. When heated by the → Sun, the gases sublimate and produce an atmosphere surrounding the nucleus known as the → coma, which is later swept into an elongated tail. Reliable measurements of cometary nuclei indicate sizes from a few km to 10 or 20 km. The nucleus of → Comet Hale-Bopp is one of the largest (perhaps 40 km). The composition of the nucleus is determined by measuring the composition of the coma (except for 67P/Churyumov-Gerasimenko). The dominant → volatile is → water, followed by → carbon dioxide (CO2), → carbon monoxide (CO), → formaldehyde (H2CO), → methanol (CH3OH), → methane (CH4) at a few percent level (with respect to water) and many other molecules at a lower level." ;
+               <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=comet+nucleus" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/cometary_tail
+:cometary_tail rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
+               rdfs:comment "Fr.: queue de comète" ;
+               rdfs:label "cometary tail" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) A formation of → gas and/or → dust that streams away from the → coma of many comets under the influence of the Sun's → radiation pressure and the → solar wind. See also: → dust tail, → gas tail, → ion tail, → plasma tail, → sodium tail, → Type I tail, → Type II tail, → antitail." ;
+               <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=comet+nucleus" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/compact_object
+:compact_object rdf:type owl:Class ;
+                rdfs:subClassOf :astronomical_object ;
+                rdfs:comment "Fr.: objet compact" ;
+                rdfs:label "compact object" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) An astronomical object that is substantially denser or more compact than most objects of its class. More specifically, a → neutron star or a → stellar black hole." ;
+                <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=compact+object" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/compton_era
+:compton_era rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/core
+:core rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
+      rdfs:comment "Fr.: cœur, noyau" ;
+      <http://www.w3.org/2004/02/skos/core#definition> """1) The central region of a star in which energy is generated by → thermonuclear reactions.
+2) The central region of a planet or satellite which has a → differentiated interior.
+3) The innermost and densest layer of the Earth, lying from 2890 km to 6360 km beneath the surface. It consists primarily of the metals iron and nickel, and is divided into the → outer core, which is believed to be liquid, and the → inner core, which is believed to be solid.
+4) The central region of a → star cluster.
+5) A flat → density profile representing the distribution of stars in the central region of a galaxy. Cores are found in high mass galaxies. They are believed to result from the interaction of a central → supermassive black hole with another merging black hole.
+6) A progenitor of → protostars. → dense core.
+7) → reactor core.""" ;
+      <http://www.w3.org/2004/02/skos/core#definitionSource> "https://dictionary.obspm.fr/index.php?formSearchTextfield=core&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/core_collapse
+:core_collapse rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+               rdfs:comment "Fr.: effondrement de cœur" ;
+               rdfs:label "core collapse" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) The collapse of a → massive star's core at the → final → stages of its → evolution when the core consists entirely of → iron (→ iron core). Since iron cannot burn in → nuclear reaction, no energy is generated to support the → gravitational collapse. The result will be a → supernova explosion of → Type Ib, → Type Ic, or → Type II. See also → core-collapse supernova." ;
+               <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=core&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/decoupling_era
+:decoupling_era rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/dust_storm
+:dust_storm rdf:type owl:Class ;
+            rdfs:subClassOf :storm ;
+            rdfs:comment "Fr.: tempête de poussière" ;
+            rdfs:label "dust storm" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "(1) An unusual, frequently severe weather condition characterized by strong winds and dust-filled air over an extensive area. See also → dust devil, → dust whirl." ;
+            <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=storm&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/dust_tail
+:dust_tail rdf:type owl:Class ;
+           rdfs:subClassOf :cometary_tail ;
+           rdfs:comment "Fr.: queue de poussière" ;
+           rdfs:label "dust tail" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "(1) The tail of a → comet which is caused by → solar radiation pressure forcing the dust particles away from the → coma in a curved arch. Also called a → Type II tail." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/dwarf_planet
+:dwarf_planet rdf:type owl:Class ;
+              rdfs:subClassOf :substellar_object ;
+              rdfs:comment "Fr.: planète naine" ;
+              rdfs:label "dwarf planet" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "(1) A new category of → astronomical objects in the → solar system introduced in a resolution by the 26th General Assembly of the → International Astronomical Union (IAU) on August 24, 2006. The characterizing properties are as follows: 1) It is in orbit around the Sun; 2) It has sufficient mass for its self-gravity to overcome rigid body forces so that it assumes a → hydrostatic equilibrium (nearly round) shape; 3) It has not \"cleared the neighbourhood\" around its orbit; and 4) It is not a → satellite of a → planet, or other non-stellar body. The property 3 reclassified → Pluto from a planet to a dwarf planet because it has not cleared the neighborhood of its orbit (the → Kuiper Belt). The largest known dwarf planets are: → Eris, → Pluto, → Ceres, → Makemake, and → 2015 RR245." ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=dwarf+planet&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/eclipse
+:eclipse rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+         rdfs:comment "Fr.: éclipse" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "(1) The passage of the shadow of a celestial body over the surface of another. The maximum number of solar and lunar visible eclipses occurring annually is seven; the minimum number is two, both being solar. → Solar eclipses take place when the new Moon is close to an → orbital node and on the same longitude with the Sun. At that moment either the → umbra, → antumbra, or the → penumbra touches the Earth's surface. For an observer located in the umbra the eclipse is total, while for one placed in the antumbra it is annular. → Annular eclipses occur around lunar → apogee. An observer situated in the penumbra sees only a → partial eclipse. A total or annular eclipse can be seen from a band with a width of 270 km at the most, around which, the much larger partiality zone extends. The Moon's shadow crosses the Earth from west to east at about 3,200 km/h. During → total eclipses the Sun's disk is entirely covered and the → solar corona can be seen. A solar eclipse can last up to 3 h (between the first and the → fourth contacts). Totality has a theoretical maximum duration of 7m 31s, but it is usually shorter. A → lunar eclipse can be seen from any place on Earth where the Moon is above the horizon; it occurs when the full Moon passes through the central dark shadow of the Earth. The Earth's shadow is much wider than the Moon and this is why the lunar eclipses can last up to four hours (between the first and the fourth contact) (M.S.: SDE)." ;
+         <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=eclipse&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/electroweak_epoch
+:electroweak_epoch rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/epoch_of_thermalization
+:epoch_of_thermalization rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/free_floating_object
+:free_floating_object rdf:type owl:Class ;
+                      rdfs:subClassOf :substellar_object ;
+                      rdfs:comment "Fr.: objets flottants" ;
+                      rdfs:label "free floating object" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> """(1) A population of → substellar objects which are not bound to stars; they are detected in young star clusters. Their masses, estimated from their fluxes, is several Jupiter masses, lower than those of → brown dwarfs. Their formation is not yet explained. Among the envisaged possibilities: 
+1) These objects form like stars, from protostellar core collapse and subsequent accretion; 
+2) they form as low-mass members of small groups, and are ejected from the group; 
+3) they form like planets within circumstellar disks of higher-mass objects, but are ejected either due to internal dynamics or external interactions.""" ;
+                      <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=free-floating+object" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/gas_giant
+:gas_giant rdf:type owl:Class ;
+           rdfs:subClassOf :substellar_object .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/gas_tail
+:gas_tail rdf:type owl:Class ;
+          rdfs:subClassOf :cometary_tail ;
+          rdfs:comment "Fr.: queue de gaz" ;
+          rdfs:label "gas tail" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "(1) The → ionized component of a → comet's → tail, driven nearly straight away from the → Sun Sun by the → solar wind. solar wind. Also called → ion tail, → plasma tail, and → Type I tail." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/gravitational_collapse
+:gravitational_collapse rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                        rdfs:comment "Fr.: effondrement gravitationnel" ;
+                        rdfs:label "gravitational collapse" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "(1) Collapse of a mass of material as a result of the mutual → gravitational attraction of all its constituents." ;
+                        <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=collapse&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/habitable_zone
+:habitable_zone rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000028> ;
+                rdfs:comment "Fr.: zone habitable" ;
+                rdfs:label "habitable zone" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) A zone around a → star where the → temperature would be in the range 0-100 °C to sustain → liquid water on the surface of rocky planets (or sufficiently large moons). Water is thought to be a necessary component to the → formation and evolution of Earth-type life. This zone depends on the parent star's luminosity and distance; it will be farther from hotter stars. A more accurate definition of HZ needs to include other factors, such as orbital → eccentricity, heat sources other than stellar irradiation, and atmospheric properties. Same as → circumstellar habitable zone; → ecosphere." ;
+                <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=Habitable+Zone" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/hadron_era
+:hadron_era rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/high_mass_star
+:high_mass_star rdf:type owl:Class ;
+                rdfs:subClassOf :star ;
+                rdfs:comment "Fr.: étoile massive" ;
+                rdfs:label "high mass star" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) A star whose mass exceeds 8 solar masses. Same as → massive star." ,
+                                                                 "(2) A star whose mass is larger than approximately 10 → solar masses. The → spectral types of massive stars range from about B3 (→ B star) to O2 (→ O star) and include → Wolf-Rayet stars as well as → Luminous Blue Variables. Massive stars are very rare; for each star of 20 solar masses there are some 100,000 stars of 1 solar mass. Despite this rarity, they play a key role in astrophysics. They are major sites of → nucleosynthesis beyond oxygen and, therefore, are mainly responsible for the → chemical evolution of galaxies. Due to their high ultraviolet flux and powerful → stellar winds, they bring about interesting phenomena in the → interstellar medium, like → H II regions, → turbulence, → shocks, → bubbles, and so on. Massive stars are progenitors of → supernovae (→ type Ia, → type Ic and → type II), → neutron stars, and → black holes. The formation processes of massive stars is still an unresolved problem. For massive stars the → accretion time scale is larger than the → Kelvin-Helmholtz time scale. This means that massive stars reach the → main sequence while → accretion is still going on." ;
+                <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=high-mass+star" ,
+                                                                       "(2) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=Massive+star" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/intermediate-mass_black_hole
+:intermediate-mass_black_hole rdf:type owl:Class ;
+                              rdfs:subClassOf :black_hole .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/intermediate_mass_star
+:intermediate_mass_star rdf:type owl:Class ;
+                        rdfs:subClassOf :star ;
+                        rdfs:comment "Fr.: étoile de masse intermédiare" ;
+                        rdfs:label "intermediate mass star" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "(1) A star whose mass lies in the range about 2 to 8 → solar masses approximately." ;
+                        <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=intermediate-mass+star" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/irregular_satellite
+:irregular_satellite rdf:type owl:Class ;
+                     rdfs:subClassOf :satellite .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/jurassic_era
+:jurassic_era rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/lepton_era
+:lepton_era rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/low_mass_star
+:low_mass_star rdf:type owl:Class ;
+               rdfs:subClassOf :star ;
+               rdfs:comment "Fr.: étoile de faible masse" ;
+               rdfs:label "low mass star" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) A star whose mass is around that of the Sun." ;
+               <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=low-mass+star" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/lower_atmosphere
+:lower_atmosphere rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000006> ;
+                  rdfs:comment "Fr.: atmosphère inférieure" ;
+                  rdfs:label "lower atmosphere" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "(1) Generally and quite loosely, that part of the atmosphere in which most weather phenomena occur (i.e., the → troposphere and lower → stratosphere); hence used in contrast to the common meaning for the → upper atmosphere. In other contexts, the term implies the lower troposphere (Meteorology Glossary, American Meteorological Society)." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/magnetic_storm
+:magnetic_storm rdf:type owl:Class ;
+                rdfs:subClassOf :storm ;
+                rdfs:comment "Fr.: orage magnétique" ;
+                rdfs:label "magnetic storm" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) A temporary, worldwide disturbance of the Earth's magnetic field by streams of charged particles from the Sun. Magnetic storms are frequently characterized by a sudden onset, in which the magnetic field undergoes marked changes in the course of an hour or less, followed by a very gradual return to normalcy, which may take several days." ;
+                <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=storm&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/magnetopause
+:magnetopause rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000146> ;
+              rdfs:comment "Fr.: magnétopause" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "(1) The boundary layer between a planet's → magnetosphere and the → magnetic field of the → solar wind. It borders the → magnetosheath and is defined by the surface on which the pressure of the solar wind is balanced by that of the planet's magnetic field. The front point of the Earth's magnetopause, on the sun-ward side of the Earth, is about 10 terrestrial radii, on average. This point can be closer or farther, because the magnetopause contracts or expands depending on the intensity of the solar wind." ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=magnetopause" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/magnetosphere
+:magnetosphere rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000028> ;
+               rdfs:comment "Fr.: magnétosphère" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) The region around a celestial body in which the magnetic field of the body dominates the external magnetic field. Each planet with a magnetic field (Earth, Jupiter, Saturn, Uranus, and Neptune) has a magnetopause. The Earth's magnetosphere is a dynamic system that responds to solar variations. It prevents most of the charged particles carried in the → solar wind, from hitting the Earth. Since the solar wind is → supersonic, a → bow shock is formed on the sunward side of the magnetosphere. The solar wind ahead is deflected at a boundary called → magnetopause. The region between the bow shock and the magnetopause is called the → magnetosheath. As the solar wind sweeps past the Earth, the terrestrial magnetic field lines are stretched out toward the night side to form a → magnetotail." ;
+               <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=magnetosphere&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/matter_era
+:matter_era rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/mesosphere
+:mesosphere rdf:type owl:Class ;
+            rdfs:subClassOf :atmosphere ;
+            rdfs:comment "Fr.: mésosphère" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "(1) The layer of the atmosphere located between the → stratosphere and the → ionosphere, where temperature drops rapidly with increasing height. It extends between 17 to 80 kilometers above the Earth's surface." ;
+            <http://www.w3.org/2004/02/skos/core#definitionSource> """(1) 
+https://dictionary.obspm.fr/index.php?formSearchTextfield=mesosphere&formSubmit=Search&showAll=1""" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/middle_atmosphere
+:middle_atmosphere rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000006> ;
+                   rdfs:comment "Fr.: atmosphère moyenne" ;
+                   rdfs:label "middle atmosphere" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "(1) The region lying between the → troposphere and the → thermosphere comprising the → stratosphere and the → mesosphere (Meteorology Glossary, American Meteorological Society)." ;
+                   <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=atmosphere&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/mini_black_hole
+:mini_black_hole rdf:type owl:Class ;
+                 rdfs:subClassOf :black_hole .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/moon
+:moon rdf:type owl:Class ;
+      rdfs:subClassOf :substellar_object ;
+      rdfs:comment "Fr.: Lune" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "(1) A large body orbiting a planet." ,
+                                                       "(2) 1) Natural satellite of the Earth. Mass 7.35 x 1025 g = 1/81 or 0.0123 Earth's. Mean radius 1740 km = ~ 1/4 the Earth's; this relatively small size ratio makes the Earth-Moon system unique in the → solar system. Mean density 3.34 g cm-3. Mean distance from Earth 384,400 km. → Escape velocity 2.38 km s-1. → Surface gravity 162.2 cm s-2 = 0.165 Earth's. → Sidereal period 27d 7h 43m 11s. → Eccentricity 0.0549. → Inclination of → orbital plane to → ecliptic 5° 8' 43''. → Obliquity 6° 41'. → Synodic period 29d 12h 44m 2s.9. → Orbital velocity 1.02 km s-1. The Moon's average visual → Albedo is 0.12, a factor of three smaller than that of Earth. The Moon's → center of mass is displaced about 2 km in the direction of Earth. The average temperature on the surface of the Moon during the day is 107 °C. During the night, the average temperature drops to -153 °C. Studies of lunar rock have shown that melting and separation must have begun at least 4.5 x 109 years ago, so the → crust of the Moon was beginning to form a very short time after the → solar system itself. Thickness of crust ~ 60 km; of mantle ~ 1000 km. Temperature of core ~ 1500 K. It would have taken only 107 years to slow the Moon's rotation into its present lock with its → orbital period. Because of this → synchronous rotation, the Moon revolves once on its axis each time it orbits the Earth, thus always presenting the same face, the nearside, toward Earth. The Moon may have formed during a collision between the early Earth and a Mars-sized rocky planet about 4.6 billion years ago; → Theia." ;
+      <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) & (2) https://dictionary.obspm.fr/index.php?showAll=1&&search=M&&formSearchTextfield=&&page=31" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/natural_satellite
+:natural_satellite rdf:type owl:Class ;
+                   rdfs:subClassOf :satellite .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/neighborhood
+:neighborhood rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000028> ;
+              rdfs:comment "Fr.: voisinage" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "(1) The area or region around or near some place or thing; vicinity. → solar neighborhood." ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=neighborhood&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/neutron_star
+:neutron_star rdf:type owl:Class ;
+              rdfs:subClassOf :compact_object ;
+              rdfs:comment "Fr.: étoile à neutrons" ;
+              rdfs:label "neutron star" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "(1) An extremely compact ball of matter created from the central core of a star that has collapsed under gravity to such an extent that it consists almost entirely of → neutrons. Neutron stars result from two possible evolutionary scenarios: 1) The → collapse of a → massive star during a → supernova explosion; and 2) The accumulation of mass by a → white dwarf in a → binary system. The mass of a neutron star is the same as or larger than the → Chandrasekhar limit (1.4 → solar masses). Neutron stars are only about 10 km across and have a density of 1014 g cm-3, representing the densest objects having a visible surface. The structure of neutron stars consists of a thin outer crust of about 1 km thickness composed of → degenerate electrons and nuclei, which becomes progressively neutron rich with increasing depth and pressure due to → inverse beta decays. In the main body the matter consists of → superfluid neutrons in equilibrium with their decay products, a few percent protons and electrons. Neutron stars have extremely strong magnetic fields, from 3 x 1010 to 1015 gauss. As of 2010 more than 2000 neutron stars have been catalogued, which show a large variety of manifestations, mainly → pulsars." ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "" ,
+                                                                     """(1) 
+https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=neutron+star""" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/noachian_era
+:noachian_era rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/nucleosynthetic_era
+:nucleosynthetic_era rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/orbital_axis
+:orbital_axis rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000026> ;
+              rdfs:comment "Fr.: axe orbital" ;
+              rdfs:label "orbital axis" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "(1) The → perpendicular to the → orbital plane." ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&&search=&&formSearchTextfield=orbit&&page=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/orbital_debris
+:orbital_debris rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                rdfs:comment "Fr.: débris spatial" ;
+                rdfs:label "orbital debris" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) Objects in orbit around Earth created by humans, that no longer serve any useful purpose. They consist of everything from entire spent rocket stages and defunct satellites to explosion fragments, paint flakes, dust, and slag from solid rocket motors, and other small particles. Also called space junk and space waste." ;
+                <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&&search=&&formSearchTextfield=orbit&&page=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/orbital_path
+:orbital_path rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+              rdfs:comment "(1) The path followed by a body moving in a gravitational field. For bodies moving under the influence of a centrally directed force, without significant perturbation, the shape of the orbit must be one of the conic section family of curves (circle, ellipse, parabola, or hyperbola)." ,
+                           "Fr.: orbite" ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&&search=&&formSearchTextfield=orbit&&page=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/orbital_period
+:orbital_period rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/orbital_plane
+:orbital_plane rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000009> ;
+               rdfs:comment "Fr.: plan orbital" ;
+               rdfs:label "orbital plane" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "(1) The plane defined by the motion of an object about a primary body." ;
+               <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=orbital+plane" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/planck_era
+:planck_era rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/planet
+:planet rdf:type owl:Class ;
+        rdfs:subClassOf :substellar_object .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/planetary_system
+:planetary_system rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/polarity_epoch
+:polarity_epoch rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/primordial_black_hole
+:primordial_black_hole rdf:type owl:Class ;
+                       rdfs:subClassOf :black_hole .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/proton_proton_chain
+:proton_proton_chain rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                     rdfs:comment "Fr.: chaîne proton-proton" ;
+                     rdfs:label "proton-proton chain" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "(1) A series of → thermonuclear reactions, taking place mainly in → low-mass stars, such as the Sun, which transforms four hydrogen nuclei (protons) into one helium (4He) nucleus and thereby generates energy in the stellar core. First, two protons (1H) combine to form a → deuterium nucleus (2H) with the emission of a → positron (e+) and a → neutrino (ν): 1H + 1H → 2H + e+ + ν. The deuterium nucleus then rapidly captures another proton to form a helium-3 nucleus (3He), while emitting a → gamma ray (γ): 2H + 1H → 3He + γ. There are three alternatives for the next step. In the PP I chain, occurring in 86% of the cases, two 3He nuclei fuse to a final 4He nucleus while two protons are released: 3He + 3He → 4He + 1H + 1H. The mass of the resulting 4He nucleus is less than the total mass of the four original protons used to produce 4He (→ mass defect). The difference, ~ 0.7% of the total mass of the protons, is converted into energy and radiated by the Sun. In this process, the Sun loses some 4 million tons of its mass each second. See also → CNO cycle." ;
+                     <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=proton-proton+chain" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/pulsar
+:pulsar rdf:type owl:Class ;
+        rdfs:subClassOf :neutron_star ;
+        rdfs:comment "Fr.: pulsar" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "(1) A rotating → neutron star that emits a radio → beam that is centered on the → magnetic axis of the neutron star. As the magnetic axis and hence the beam are inclined to the → rotation axis, a → pulse is seen every time the → rotation brings the → magnetic pole region of the neutron star into view. In this way the pulsar acts much as a light house does, sweeping a beam of radiation through space. The pulse or spin periods range from 1.4 milliseconds to 8.5 seconds. As neutron stars concentrate an average of 1.4 → solar masses on a diameter of only 20 km, pulsars are exceedingly → dense and → compact, representing the densest matter in the observable Universe. The pulsar radiation, chiefly emitted in → radio frequencies (0.1-1 GHz), is highly → polarized. The exact mechanism by which a pulsar radiates is still a matter of vigorous investigation. Simply put, an enormous electric field is induced by the rotation of a magnetized neutron star. The force of this field exceeds gravity by ten to twelve orders of magnitudes. Charged particles are whereby pulled out from the stellar surface resulting in a dense, magnetized plasma that surrounds the pulsar (→ magnetosphere). The charged particles flow out of the magnetic → polar caps of the neutron star, following the open magnetic field lines. The acceleration of the charged particles along the curved magnetic field lines will cause them to radiate (see, e.g., M. Kramer, 2010, astro-ph/1008.5032)." ;
+        <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=pulsar" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/quaternary_period
+:quaternary_period rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/radiation_era
+:radiation_era rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/recombination_era
+:recombination_era rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/regular_satellite
+:regular_satellite rdf:type owl:Class ;
+                   rdfs:subClassOf :satellite .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/reionization_epoch
+:reionization_epoch rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/satellite
+:satellite rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+           rdfs:comment "Fr.: satellite" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "(1) A body that revolves around a planet; a moon. → Galilean satellite; → regular satellite; → irregular satellite." ,
+                                                            "(2) Something that depends on, accompanies, or serves something else. → satellite galaxy; → satellite line." ;
+           <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) & (2) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=satellite" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/small_solar_system_body
+:small_solar_system_body rdf:type owl:Class ;
+                         rdfs:subClassOf :substellar_object ;
+                         rdfs:comment "Fr.: petit corps du système solaire" ;
+                         rdfs:label "small solar system body" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "(1) A term introduced by the → International Astronomical Union (August 2006) to name the → solar system bodies other than → planets and → dwarf planets. Small solar system bodies include → asteroids, → comets, and → meteoroids." ;
+                         <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=solar+system&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/solar_luminosity
+:solar_luminosity rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                  rdfs:comment "Fr.: luminosité solaire" ;
+                  rdfs:label "solar luminosity" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "(1) The total → radiant energy, in all wavelengths, emitted by the Sun in all directions. It is 3.828 × 1026 W or 3.828 × 1033 erg sec-1 (International Astronomical Union, Resolution B3, 14 August 2015, Honolulu, USA). This is the luminosity unit conventionally used to give the luminosities of stars. See also: → solar constant. When the Earth first formed, 4.56 billion years ago, the Sun radiated 30% less energy than it does today, thus giving rise to the so-called → faint early Sun paradox. Ever since then, its power has increased by 7% every billion years (I. Ribas, 2009, arXiv:0911.4872)." ;
+                  <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=solar+luminosity" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/solar_satellite
+:solar_satellite rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                 <http://www.w3.org/2004/02/skos/core#definition> """(1) Fr.: satellite solaire   
+
+A space vehicle designed to orbit about the Sun.""" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/sothic_period
+:sothic_period rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/star
+:star rdf:type owl:Class ;
+      rdfs:subClassOf :astronomical_object ;
+      rdfs:comment "Fr.: étoile" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "(1) A huge mass of hot gas whose radiation is provided by its internal → thermonuclear reactions. A star represents a → hydrodynamic equilibrium between two opposing forces, the inward → gravitational force, which is attempting to make the mass collapse and the pressure caused by the generation of nuclear energy. Below a certain mass (0.08 → solar masses), the central pressures and temperatures are insufficient to trigger the → hydrogen fusion (→ brown dwarf). Stars have a variety of masses and sizes. → Massive stars are less common than → low-mass stars (→ initial mass function). → Star formation results from → gravitational collapse of → molecular clouds (→ fragmentation; → pre-stellar core; → protostar; → accretion). After leaving the → main sequence, they pass through several evolutionary stages (e.g., → red giant, → supergiant, → white dwarf, → supernova, → neutron star) depending on their initial masses. See also: → internal structure of stars; → spectral classification; → luminosity class; → variable star; → multiple star. The term star is sometimes loosely applied to objects that do not comply with the above specifications, but are evolutionary products of stars, such as neutron stars and white dwarfs. For ancient civilizations a star was anything appearing in the night sky, apart from perhaps the Moon." ;
+      <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&&search=S&&formSearchTextfield=&&page=46" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/star_formation
+:star_formation rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                rdfs:comment "" ,
+                             "Fr.: formation d'étoiles" ;
+                rdfs:label "star formation" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) The process by which dense parts of molecular clouds collapse into a ball of plasma to form a star. As a branch of astronomy, star formation includes the study of the interstellar medium and molecular clouds as precursors to the star formation process as well as the study of young stellar objects." ;
+                <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=star+formation" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/stellar_atmosphere
+:stellar_atmosphere rdf:type owl:Class ;
+                    rdfs:subClassOf :atmosphere ;
+                    rdfs:comment "Fr.: atmosphère stellaire" ;
+                    rdfs:label "stellar atmosphere" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "(1) The outer envelope of gas and plasma that surrounds a star; characterized by pressure, temperature, density, chemical composition, and opacity at varying altitudes." ;
+                    <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=atmosphere&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/stellar_black_hole
+:stellar_black_hole rdf:type owl:Class ;
+                    rdfs:subClassOf :black_hole ;
+                    rdfs:comment "Fr.: trou noir stellaire" ;
+                    rdfs:label "stellar black hole" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "(1) A → black hole with a mass in the range 3-30 → solar masses representing the end-product of → massive star evolution. Since → neutron stars cannot have masses larger than 3 solar masses, compact objects more massive than this must be black holes. There is good observational evidence for the existence of stellar black holes, based in particular on dynamical measurements of the masses of compact objects in → transient X-ray sources. Same as → stellar-mass black hole." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/stellar_system
+:stellar_system rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ;
+                rdfs:comment "Fr.: système stellaire" ;
+                rdfs:label "stellar system" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "(1) A system comprised of a group of stars bound by → gravitational attraction. Same as → star system." ;
+                <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=stellar+system" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/storm
+:storm rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+       rdfs:comment "Fr.: orage" ;
+       <http://www.w3.org/2004/02/skos/core#definition> """(1) An atmospheric disturbance with strong winds accompanied by rain, snow, or other precipitation and often by thunder and lightning.
+A violent disturbance or upheaval.""" ;
+       <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=storm&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/stratosphere
+:stratosphere rdf:type owl:Class ;
+              rdfs:subClassOf :atmosphere ;
+              rdfs:comment "Fr.: stratosphère" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "(1) The second major layer of Earth's atmosphere, just above the → troposphere and below the → mesosphere, extending from about 20 km to 90 km above the Earth. It is characterized by little vertical increase in temperature." ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=stratosphere" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/substellar_object
+:substellar_object rdf:type owl:Class ;
+                   rdfs:subClassOf :astronomical_object ;
+                   rdfs:comment "Fr.: objet sous-stellaire" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "(1) An object with a mass too small to sustain the → proton-proton chain and thus become a true star. See → brown dwarf." ;
+                   <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=substellar+object" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/super_massive_star
+:super_massive_star rdf:type owl:Class ;
+                    rdfs:subClassOf :star ;
+                    rdfs:comment "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=Massive+star" ,
+                                 "Fr.: étoile supermassive" ;
+                    rdfs:label "super massive star" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "(1) A star with an initial mass over about 120 solar masses. The existence of such stars is the present Universe is not confirmed. Such stars were proposed as an explanation for very bright O type stars in the Large Magellanic Cloud, but these are now known to be clusters of ordinary O stars." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/supermassive_black_hole
+:supermassive_black_hole rdf:type owl:Class ;
+                         rdfs:subClassOf :black_hole .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/supernova
+:supernova rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+           rdfs:comment "Fr.: supernova" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "(1) A violent stellar explosion which blows off all or most of the star's material at high velocity leaving a compact stellar remnant such as a → neutron star or → black hole. At → maximum light, the supernova can have → luminosity about 108 or 109 times the → solar luminosity. The phenomenon results from the later evolution of stars when an instability sets in the core following the → nucleosynthesis of → iron. In → massive stars, the supernova occurs when the star has used up all its available → nuclear fuel and it reaches a lower energy state through → gravitational collapse to form a more compact object. In → white dwarfs forming → binary systems, → accretion of mass onto the surface of a neutron star can be sufficient to take the star over the upper mass limit for stability as a white dwarf. Consequently, the white dwarf collapses in a → supernova explosion to form a neutron star. There are several → supernova types." ;
+           <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=supernova" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/supernova_explosion
+:supernova_explosion rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                     rdfs:comment "Fr.: explosion de supernova" ;
+                     rdfs:label "supernova explosion" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "(1) The very short and violent phenomenon that occurs when a star undergoes → core collapse or → thermonuclear runaway." ;
+                     <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=supernova+explosion" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/thermosphere
+:thermosphere rdf:type owl:Class ;
+              rdfs:subClassOf :atmosphere ;
+              rdfs:comment "Fr.: thermosphère" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "(1) The region of the upper atmosphere in which temperature increases continuously with height, starting at roughly 100 km. The thermosphere includes the exosphere and most of the ionosphere." ;
+              <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=thermosphere&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/troposphere
+:troposphere rdf:type owl:Class ;
+             rdfs:subClassOf :atmosphere ;
+             rdfs:comment "Fr.: troposphère" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "(1) The lower part of the Earth's atmosphere in which temperature decreases with height, except for local areas of → temperature inversion." ;
+             <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?formSearchTextfield=troposphere&formSubmit=Search&showAll=1" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/upper_atmosphere
+:upper_atmosphere rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000006> ;
+                  rdfs:comment "Fr.: atmosphère supérieure" ;
+                  rdfs:label "upper atmosphere" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "(1) The general term applied to the atmosphere above the → troposphere." .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/very_low_mass_star
+:very_low_mass_star rdf:type owl:Class ;
+                    rdfs:subClassOf :star ;
+                    rdfs:comment "Fr.: étoile de très faible masse" ;
+                    rdfs:label "very low mass star" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "(1) A star with a typical mass of one-hundredth of the mass of the Sun (→ solar mass) and a luminosity of about one-millionth that of the Sun (→ solar luminosity). Same as → brown dwarf." ;
+                    <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=low-mass+star" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/very_masssive_star
+:very_masssive_star rdf:type owl:Class ;
+                    rdfs:subClassOf :star ;
+                    rdfs:comment "Fr.: étoile très massive" ;
+                    rdfs:label "very massive star" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "(1) A star of mass around 100 → solar masses." ;
+                    <http://www.w3.org/2004/02/skos/core#definitionSource> "(1) https://dictionary.obspm.fr/index.php?showAll=1&formSearchTextfield=Massive+star" .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/victorian_period
+:victorian_period rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> .
+
+
+###  http://www.semanticweb.org/miroi/ontologies/2024/6/untitled-ontology-27/white_dwarf
+:white_dwarf rdf:type owl:Class ;
+             rdfs:subClassOf :substellar_object .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
